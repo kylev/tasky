@@ -1,4 +1,5 @@
 Tasky::Application.routes.draw do
+  match '/' => 'todos#view'
   resources :users
 
   resources :todos
