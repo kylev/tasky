@@ -1,6 +1,7 @@
 Tasky::Application.routes.draw do
-  match '/' => 'pages#login'
+  root :to => 'pages#login'
   get "pages/login"
+  post "pages/do_login"
 
   resources :users
 

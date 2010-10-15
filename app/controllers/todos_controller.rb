@@ -1,4 +1,6 @@
 class TodosController < ApplicationController
+  before_filter :require_user
+
   # GET /todos
   # GET /todos.xml
   def index
