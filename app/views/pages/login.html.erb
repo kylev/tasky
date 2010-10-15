@@ -1,8 +1,16 @@
-<h1>Pages#login</h1>
-<p>Find me in app/views/pages/login.html.erb</p>
+<h1>Login</h1>
 
-<%= form_tag :action => 'login' %>
-  <%= text_field_tag  'email' %>
-  <%= password_field_tag 'password' %>
-  <%= submit_tag 'Login'  %>
-</form>
+<%= form_for(:page, :url => pages_path) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Login!" %>
+  </div>
+<% end %>
+

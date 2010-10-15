@@ -1,10 +1,7 @@
 Tasky::Application.routes.draw do
   root :to => 'pages#login'
-  get "pages/login"
-  post "pages/do_login"
-
+  resources :pages
   resources :users
-
   resources :todos
 
   # The priority is based upon order of creation:
